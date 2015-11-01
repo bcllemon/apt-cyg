@@ -3,6 +3,11 @@ apt-cyg
 
 Fork of [apt-cyg](http://code.google.com/p/apt-cyg/) from http://code.google.com/p/apt-cyg/
 
+Change
+======
+1. change source to mirrors.163.com
+2. change md5sum to sha512sum
+
 Intro
 -----
 apt-cyg is a command-line installer for Cygwin which cooperates with Cygwin Setup and uses the same repository. The syntax is similar to apt-get. Usage examples:

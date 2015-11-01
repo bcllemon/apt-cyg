@@ -66,7 +66,7 @@ function findworkspace()
 {
   # default working directory and mirror
 
-  mirror=ftp://mirror.mcs.anl.gov/pub/cygwin
+  mirror=http://mirrors.163.com/cygwin/
   cache=/setup
 
   # work wherever setup worked last, if possible
@@ -426,7 +426,7 @@ case "$command" in
 
     # check the md5
     digest=`cat "desc" | awk '/^install: / { print $4; exit }'`
-    digactual=`md5sum $file | awk '{print $1}'`
+    digactual=`sha512sum $file | awk '{print $1}'`
     if ! test $digest = $digactual
     then
       echo MD5 sum did not match, exiting
@@ -552,4 +552,3 @@ case "$command" in
   ;;
 
 esac
-
